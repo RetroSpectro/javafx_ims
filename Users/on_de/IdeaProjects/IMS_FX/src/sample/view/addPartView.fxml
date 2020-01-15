@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="483.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddPartController">
+   <children>
+      <RadioButton fx:id="outSrcRdBtn" layoutX="264.0" layoutY="43.0" mnemonicParsing="false" selected="true" text="Outsourced">
+         <toggleGroup>
+            <ToggleGroup fx:id="group" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="inHouseRdBtn" layoutX="155.0" layoutY="43.0" mnemonicParsing="false" text="In-House" toggleGroup="$group" />
+      <Label layoutX="20.0" layoutY="39.0" text="Add Part">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="111.0" text="ID" />
+      <Label layoutX="84.0" layoutY="158.0" text="Name" />
+      <Label layoutX="86.0" layoutY="208.0" text="Inv" />
+      <Label layoutX="85.0" layoutY="255.0" text="Price/Cost" />
+      <Label layoutX="83.0" layoutY="304.0" text="Max" />
+      <Label layoutX="310.0" layoutY="305.0" text="Min" />
+      <Label fx:id="cmpLabel" layoutX="84.0" layoutY="355.0" text="Company Name" />
+      <TextField fx:id="idTxtBx" disable="true" layoutX="203.0" layoutY="108.0" />
+      <TextField fx:id="nameTxtBx" layoutX="203.0" layoutY="155.0" promptText="Part Name">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="invTxtBx" layoutX="203.0" layoutY="205.0" promptText="Inv">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="priceTxtBx" layoutX="203.0" layoutY="252.0" promptText="Price/Cost">
+          <font>
+              <Font name="System Italic" size="12.0" />
+          </font>
+      </TextField>
+      <TextField fx:id="maxTxtBx" layoutX="203.0" layoutY="301.0" prefHeight="25.0" prefWidth="87.0" promptText="Max">
+          <font>
+              <Font name="System Italic" size="12.0" />
+          </font>
+      </TextField>
+      <TextField fx:id="minTxtBx" layoutX="343.0" layoutY="301.0" prefHeight="25.0" prefWidth="102.0" promptText="Min">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="corpTxtBx" layoutX="203.0" layoutY="351.0" promptText="Comp Name">
+          <font>
+              <Font name="System Italic" size="12.0" />
+          </font>
+      </TextField>
+      <Button fx:id="saveBtn" layoutX="156.0" layoutY="400.0" mnemonicParsing="false" onAction="#save" prefHeight="34.0" prefWidth="87.0" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="264.0" layoutY="400.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="34.0" prefWidth="83.0" text="Cancel" />
+   </children>
+</AnchorPane>

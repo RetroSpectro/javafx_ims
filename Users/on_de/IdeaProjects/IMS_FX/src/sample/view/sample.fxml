@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="478.0" prefWidth="1103.0">
+         <children>
+            <TableView fx:id="tableParts" layoutX="70.0" layoutY="125.0" prefHeight="200.0" prefWidth="446.0">
+              <columns>
+                <TableColumn fx:id="partIDCol" prefWidth="103.0" text="Part ID" />
+                <TableColumn fx:id="partNmCol" prefWidth="105.0" text="Part Name" />
+                  <TableColumn fx:id="partInvCol" prefWidth="107.0" text="Inventory Level" />
+                  <TableColumn fx:id="partPriceCol" prefWidth="130.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <Separator layoutX="549.0" layoutY="125.0" orientation="VERTICAL" prefHeight="200.0" />
+            <TableView fx:id="tableProducts" layoutX="590.0" layoutY="125.0" prefHeight="200.0" prefWidth="446.0">
+              <columns>
+                <TableColumn fx:id="prdctIDCol" prefWidth="103.0" text="Product ID" />
+                <TableColumn fx:id="prdctNmCol" prefWidth="99.0" text="Product Name" />
+                  <TableColumn fx:id="prdctInvCol" prefWidth="119.0" text="Inventory Level" />
+                  <TableColumn fx:id="prdctPriceCol" prefWidth="124.0" text="Price per Unit" />
+              </columns>
+            </TableView>
+            <Label layoutX="85.0" layoutY="93.0" text="Parts">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="596.0" layoutY="93.0" text="Products">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Button fx:id="srcPartBtn" layoutX="284.0" layoutY="89.0" mnemonicParsing="false" onAction="#searchPart" text="Search" />
+            <Button fx:id="srcPrdctBtn" layoutX="813.0" layoutY="89.0" mnemonicParsing="false" onAction="#searchProduct" text="Search" />
+            <TextField fx:id="searchPartTxtBx" layoutX="367.0" layoutY="89.0" />
+            <TextField fx:id="searchProdTxtBx" layoutX="887.0" layoutY="89.0" />
+            <Button fx:id="addPartBtn" layoutX="258.0" layoutY="334.0" mnemonicParsing="false" onAction="#AddPart" text="Add" />
+            <Button fx:id="modPartBtn" layoutX="336.0" layoutY="334.0" mnemonicParsing="false" onAction="#ModPart" text="Modify" />
+            <Button fx:id="deletePartBtn" layoutX="415.0" layoutY="334.0" mnemonicParsing="false" onAction="#deletePart" text="Delete" />
+            <Button fx:id="addPrdctBtn" layoutX="839.0" layoutY="334.0" mnemonicParsing="false" onAction="#AddProduct" text="Add" />
+            <Button fx:id="modPrdctBtn" layoutX="902.0" layoutY="334.0" mnemonicParsing="false" onAction="#ModProduct" text="Modify" />
+            <Button fx:id="deletePrdctBtn" layoutX="984.0" layoutY="334.0" mnemonicParsing="false" onAction="#deleteProduct" text="Delete" />
+            <Label layoutX="71.0" layoutY="29.0" text="Inventory Management System" textFill="#0914b9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
