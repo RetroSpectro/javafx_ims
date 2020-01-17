@@ -15,6 +15,7 @@
               <node kind="schema" qname="ims_schema" />
             </node>
             <node kind="database" qname="postgres" />
+            <node kind="schema" name="new_schema" />
           </node>
         </introspection-scope>
       </schema-mapping>

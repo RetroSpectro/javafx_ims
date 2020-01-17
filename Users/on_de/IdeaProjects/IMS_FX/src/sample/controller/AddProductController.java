@@ -62,7 +62,8 @@ public class AddProductController implements Initializable {
             inv.addProduct(prod);
 
         } else if (prod != null && productToModify != null) {
-            inv.updateProduct(inv.getAllParts().indexOf(productToModify), prod);
+            System.out.println();
+            inv.updateProduct(inv.getAllProducts().indexOf(productToModify), prod);
         } else {
             return;
         }

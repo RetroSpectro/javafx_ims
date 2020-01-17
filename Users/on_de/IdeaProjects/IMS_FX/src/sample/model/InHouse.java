@@ -1,6 +1,7 @@
 package sample.model;
 
 import javafx.beans.property.SimpleIntegerProperty;
+import sample.extended.DB_Manager;
 
 public class InHouse extends Part {
 

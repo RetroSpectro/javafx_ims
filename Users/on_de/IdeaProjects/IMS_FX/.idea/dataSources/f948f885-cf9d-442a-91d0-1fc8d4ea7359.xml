@@ -8,9 +8,11 @@
     <database id="2" parent="1" name="ims_database">
       <ObjectId>16394</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>552</IntrospectionStateNumber>
+      <IntrospectionStateNumber>584</IntrospectionStateNumber>
       <Relations>sequence|table|16405|16396|1
+sequence|table|16440|16437|1
 sequence|table|16413|16399|1
+sequence|table|16449|16451|1
 sequence|table|16421|16402|1
 </Relations>
     </database>
@@ -18,7 +20,7 @@ sequence|table|16421|16402|1
       <ObjectId>13318</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>500</IntrospectionStateNumber>
+      <IntrospectionStateNumber>578</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
@@ -58,7 +60,7 @@ sequence|table|16421|16402|1
       <ObjectId>16395</ObjectId>
       <StateNumber>501</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>553</IntrospectionStateNumber>
+      <IntrospectionStateNumber>585</IntrospectionStateNumber>
     </schema>
     <schema id="14" parent="2" name="information_schema">
       <ObjectId>13018</ObjectId>
@@ -78,14 +80,20 @@ sequence|table|16421|16402|1
       <Owner>postgres</Owner>
       <Current>1</Current>
     </schema>
-    <access-method id="17" parent="2" name="heap">
+    <schema id="17" parent="2" name="temp">
+      <ObjectId>16448</ObjectId>
+      <StateNumber>570</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>582</IntrospectionStateNumber>
+    </schema>
+    <access-method id="18" parent="2" name="heap">
       <ObjectId>2</ObjectId>
       <Comment>heap table access method</Comment>
       <StateNumber>1</StateNumber>
       <Handler>pg_catalog.heap_tableam_handler</Handler>
       <HandlerId>3</HandlerId>
     </access-method>
-    <access-method id="18" parent="2" name="btree">
+    <access-method id="19" parent="2" name="btree">
       <ObjectId>403</ObjectId>
       <Comment>b-tree index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -93,7 +101,7 @@ sequence|table|16421|16402|1
       <HandlerId>330</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="19" parent="2" name="hash">
+    <access-method id="20" parent="2" name="hash">
       <ObjectId>405</ObjectId>
       <Comment>hash index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -101,7 +109,7 @@ sequence|table|16421|16402|1
       <HandlerId>331</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="20" parent="2" name="gist">
+    <access-method id="21" parent="2" name="gist">
       <ObjectId>783</ObjectId>
       <Comment>GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -109,7 +117,7 @@ sequence|table|16421|16402|1
       <HandlerId>332</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="21" parent="2" name="gin">
+    <access-method id="22" parent="2" name="gin">
       <ObjectId>2742</ObjectId>
       <Comment>GIN index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -117,7 +125,7 @@ sequence|table|16421|16402|1
       <HandlerId>333</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="22" parent="2" name="spgist">
+    <access-method id="23" parent="2" name="spgist">
       <ObjectId>4000</ObjectId>
       <Comment>SP-GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -125,7 +133,7 @@ sequence|table|16421|16402|1
       <HandlerId>334</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="23" parent="2" name="brin">
+    <access-method id="24" parent="2" name="brin">
       <ObjectId>3580</ObjectId>
       <Comment>block range index (BRIN) access method</Comment>
       <StateNumber>1</StateNumber>
@@ -133,7 +141,7 @@ sequence|table|16421|16402|1
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <extension id="24" parent="2" name="plpgsql">
+    <extension id="25" parent="2" name="plpgsql">
       <ObjectId>13304</ObjectId>
       <Comment>PL/pgSQL procedural language</Comment>
       <StateNumber>437</StateNumber>
@@ -141,18 +149,23 @@ sequence|table|16421|16402|1
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <schema id="25" parent="3" name="information_schema">
+    <schema id="26" parent="3" name="information_schema">
       <ObjectId>13018</ObjectId>
       <StateNumber>282</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="26" parent="3" name="pg_catalog">
+    <schema id="27" parent="3" name="new_schema">
+      <ObjectId>16436</ObjectId>
+      <StateNumber>554</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="28" parent="3" name="pg_catalog">
       <ObjectId>11</ObjectId>
       <Comment>system catalog schema</Comment>
       <StateNumber>275</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="27" parent="3" name="public">
+    <schema id="29" parent="3" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
@@ -160,14 +173,14 @@ sequence|table|16421|16402|1
       <IntrospectionStateNumber>491</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
-    <access-method id="28" parent="3" name="heap">
+    <access-method id="30" parent="3" name="heap">
       <ObjectId>2</ObjectId>
       <Comment>heap table access method</Comment>
       <StateNumber>1</StateNumber>
       <Handler>pg_catalog.heap_tableam_handler</Handler>
       <HandlerId>3</HandlerId>
     </access-method>
-    <access-method id="29" parent="3" name="btree">
+    <access-method id="31" parent="3" name="btree">
       <ObjectId>403</ObjectId>
       <Comment>b-tree index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -175,7 +188,7 @@ sequence|table|16421|16402|1
       <HandlerId>330</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="30" parent="3" name="hash">
+    <access-method id="32" parent="3" name="hash">
       <ObjectId>405</ObjectId>
       <Comment>hash index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -183,7 +196,7 @@ sequence|table|16421|16402|1
       <HandlerId>331</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="31" parent="3" name="gist">
+    <access-method id="33" parent="3" name="gist">
       <ObjectId>783</ObjectId>
       <Comment>GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -191,7 +204,7 @@ sequence|table|16421|16402|1
       <HandlerId>332</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="32" parent="3" name="gin">
+    <access-method id="34" parent="3" name="gin">
       <ObjectId>2742</ObjectId>
       <Comment>GIN index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -199,7 +212,7 @@ sequence|table|16421|16402|1
       <HandlerId>333</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="33" parent="3" name="spgist">
+    <access-method id="35" parent="3" name="spgist">
       <ObjectId>4000</ObjectId>
       <Comment>SP-GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -207,7 +220,7 @@ sequence|table|16421|16402|1
       <HandlerId>334</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="34" parent="3" name="brin">
+    <access-method id="36" parent="3" name="brin">
       <ObjectId>3580</ObjectId>
       <Comment>block range index (BRIN) access method</Comment>
       <StateNumber>1</StateNumber>
@@ -215,7 +228,7 @@ sequence|table|16421|16402|1
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <extension id="35" parent="3" name="adminpack">
+    <extension id="37" parent="3" name="adminpack">
       <ObjectId>16384</ObjectId>
       <Comment>administrative functions for PostgreSQL</Comment>
       <StateNumber>487</StateNumber>
@@ -223,7 +236,7 @@ sequence|table|16421|16402|1
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <extension id="36" parent="3" name="plpgsql">
+    <extension id="38" parent="3" name="plpgsql">
       <ObjectId>13304</ObjectId>
       <Comment>PL/pgSQL procedural language</Comment>
       <StateNumber>437</StateNumber>
@@ -231,7 +244,7 @@ sequence|table|16421|16402|1
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="37" parent="13" name="inventory_id_seq">
+    <sequence id="39" parent="13" name="inventory_id_seq">
       <ObjectId>16405</ObjectId>
       <StateNumber>512</StateNumber>
       <Owner>postgres</Owner>
@@ -239,7 +252,7 @@ sequence|table|16421|16402|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="38" parent="13" name="part_id_seq">
+    <sequence id="40" parent="13" name="part_id_seq">
       <ObjectId>16413</ObjectId>
       <StateNumber>516</StateNumber>
       <Owner>postgres</Owner>
@@ -247,7 +260,7 @@ sequence|table|16421|16402|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="39" parent="13" name="product_id_seq">
+    <sequence id="41" parent="13" name="product_id_seq">
       <ObjectId>16421</ObjectId>
       <StateNumber>520</StateNumber>
       <Owner>postgres</Owner>
@@ -255,22 +268,35 @@ sequence|table|16421|16402|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="40" parent="13" name="inventory">
+    <sequence id="42" parent="13" name="product_parts_id_seq">
+      <ObjectId>16440</ObjectId>
+      <StateNumber>564</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="43" parent="13" name="inventory">
       <ObjectId>16396</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>512</StateNumber>
     </table>
-    <table id="41" parent="13" name="part">
+    <table id="44" parent="13" name="part">
       <ObjectId>16399</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>539</StateNumber>
     </table>
-    <table id="42" parent="13" name="product">
+    <table id="45" parent="13" name="product">
       <ObjectId>16402</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>551</StateNumber>
     </table>
-    <column id="43" parent="40" name="id">
+    <table id="46" parent="13" name="product_parts">
+      <ObjectId>16437</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>566</StateNumber>
+    </table>
+    <column id="47" parent="43" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -278,21 +304,21 @@ sequence|table|16421|16402|1
       <DefaultExpression>nextval(&apos;ims_schema.inventory_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <index id="44" parent="40" name="inventory_pk">
+    <index id="48" parent="43" name="inventory_pk">
       <ObjectId>16411</ObjectId>
       <StateNumber>513</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="45" parent="40" name="inventory_pk">
+    <key id="49" parent="43" name="inventory_pk">
       <ObjectId>16412</ObjectId>
       <StateNumber>513</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>inventory_pk</UnderlyingIndexName>
     </key>
-    <column id="46" parent="41" name="id">
+    <column id="50" parent="44" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -300,76 +326,68 @@ sequence|table|16421|16402|1
       <DefaultExpression>nextval(&apos;ims_schema.part_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="47" parent="41" name="name">
+    <column id="51" parent="44" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>525</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="48" parent="41" name="inv">
+    <column id="52" parent="44" name="inv">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>528</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="49" parent="41" name="price">
+    <column id="53" parent="44" name="price">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>529</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="50" parent="41" name="max">
+    <column id="54" parent="44" name="max">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>530</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="41" name="min">
+    <column id="55" parent="44" name="min">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>531</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="52" parent="41" name="machine_id">
+    <column id="56" parent="44" name="machine_id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>532</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="53" parent="41" name="comp_name">
+    <column id="57" parent="44" name="comp_name">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>533</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="54" parent="41" name="type">
-      <Position>9</Position>
-      <DataType>boolean|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>539</StateNumber>
-      <DefaultExpression>true</DefaultExpression>
-      <TypeId>16</TypeId>
-    </column>
-    <index id="55" parent="41" name="part_pk">
+    <index id="58" parent="44" name="part_pk">
       <ObjectId>16419</ObjectId>
       <StateNumber>517</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="56" parent="41" name="part_pk">
+    <key id="59" parent="44" name="part_pk">
       <ObjectId>16420</ObjectId>
       <StateNumber>517</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>part_pk</UnderlyingIndexName>
     </key>
-    <column id="57" parent="42" name="id">
+    <column id="60" parent="45" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -377,60 +395,90 @@ sequence|table|16421|16402|1
       <DefaultExpression>nextval(&apos;ims_schema.product_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="58" parent="42" name="name">
+    <column id="61" parent="45" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>544</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="42" name="inv">
+    <column id="62" parent="45" name="inv">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>545</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="60" parent="42" name="price">
+    <column id="63" parent="45" name="price">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>546</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="61" parent="42" name="max">
+    <column id="64" parent="45" name="max">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>547</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="62" parent="42" name="min">
+    <column id="65" parent="45" name="min">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>548</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="63" parent="42" name="parts">
-      <Position>7</Position>
-      <DataType>integer[]|0s</DataType>
-      <StateNumber>551</StateNumber>
-      <TypeId>1007</TypeId>
-    </column>
-    <index id="64" parent="42" name="product_pk">
+    <index id="66" parent="45" name="product_pk">
       <ObjectId>16427</ObjectId>
       <StateNumber>521</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="65" parent="42" name="product_pk">
+    <key id="67" parent="45" name="product_pk">
       <ObjectId>16428</ObjectId>
       <StateNumber>521</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>product_pk</UnderlyingIndexName>
+    </key>
+    <column id="68" parent="46" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>564</StateNumber>
+      <DefaultExpression>nextval(&apos;ims_schema.product_parts_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="69" parent="46" name="prod_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>565</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="70" parent="46" name="part_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>566</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="71" parent="46" name="product_parts_pk">
+      <ObjectId>16446</ObjectId>
+      <StateNumber>567</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="72" parent="46" name="product_parts_pk">
+      <ObjectId>16447</ObjectId>
+      <StateNumber>567</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>product_parts_pk</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

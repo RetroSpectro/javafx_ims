@@ -1,6 +1,7 @@
 package sample.model;
 
 import javafx.beans.property.SimpleStringProperty;
+import sample.extended.DB_Manager;
 
 public class Outsourced extends Part {
     private SimpleStringProperty companyName;

@@ -123,7 +123,7 @@ public class Controller implements Initializable {
     public void deletePart(ActionEvent event) {
         if (tableParts.getSelectionModel().getSelectedItem() != null) {
             Part p = (Part) tableParts.getSelectionModel().getSelectedItem();
-            inventory.deletePart(p);
+            inventory.deletePart(p, p.getId());
         } else {
 
             makeAlert("Pick the part in the table");
@@ -133,8 +133,9 @@ public class Controller implements Initializable {
 
     public void deleteProduct(ActionEvent event) {
         if (tableProducts.getSelectionModel().getSelectedItem() != null) {
-            Product p = (Product) tableParts.getSelectionModel().getSelectedItem();
-           inventory.deleteProduct(p);
+            Product p = (Product) tableProducts.getSelectionModel().getSelectedItem();
+            System.out.println(p.getId());
+           inventory.deleteProduct(p, p.getId());
         } else {
             makeAlert("Pick the part in the table");
         }

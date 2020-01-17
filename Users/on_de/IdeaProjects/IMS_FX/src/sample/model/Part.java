@@ -2,6 +2,7 @@ package sample.model;
 
 import javafx.beans.property.*;
 
+import java.sql.Connection;
 
 public class Part {
 

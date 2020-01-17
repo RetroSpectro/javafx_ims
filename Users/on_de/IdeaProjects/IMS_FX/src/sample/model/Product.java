@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import sample.extended.DB_Manager;
 
 public class Product {
     private ObservableList<Part> associatedParts;
@@ -29,22 +30,22 @@ public class Product {
     public void addAssociatedPart(Part part)
     {
         associatedParts.add(part);
+        DB_Manager.getInstance().addAssociatedPart(part,this.getId());
     }
     public void deleteAssociatedPart(Part associatedPart)
     {
         associatedParts.remove(associatedPart);
+        DB_Manager.getInstance().deleteAssociatedPart(associatedPart.getId(), this.getId());
     }
     public ObservableList<Part> getAllAssociatedParts()
     {
         return associatedParts;
     }
 
-    public ObservableList<Part> getAssociatedParts() {
-        return associatedParts;
-    }
-
     public void setAssociatedParts(ObservableList<Part> associatedParts) {
         this.associatedParts = associatedParts;
+        System.out.println(this.getId());
+        DB_Manager.getInstance().addAssociatedParts(associatedParts,this.getId());
     }
 
     public int getId() {
